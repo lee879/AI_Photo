@@ -339,7 +339,7 @@ def predict():
     for i in range(100):
         generator = ResNet_Generator()
         generator.build(input_shape=(None,100))
-        generator.load_weights(r"C:\Users\Arbi\PycharmProjects\tf_CV\GAN\ckpt\best_weights_g.h5")
+        generator.load_weights(r".\ckpt\best_weights_g.h5")
         z = tf.random.uniform([100, 100])
         img1 = generator(z)
         img_path = os.path.join(r"./predict", "wgan_and_sltm_normal_relu_%d.png" % i)
